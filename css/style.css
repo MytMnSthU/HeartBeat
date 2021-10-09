@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@900&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Mulish', sans-serif;
+    height: 100vh;
+    background-color: #5758BB;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.text{
+    font-size: 2.2rem;
+    color: #fff;
+    text-align: center;
+    height: 80px;
+}
+.box {
+  background-color: #B53471;
+  width: 50px;
+  height: 50px;
+
+  position: relative;
+
+  transform: rotate(-45deg);
+  cursor: pointer;
+}
+
+.box:before,
+.box:after {
+  content: "";
+  background-color: #B53471;
+  border-radius: 50%;
+  height: 50px;
+  position: absolute;
+  width: 50px;
+}
+
+.box:before {
+  top: -25px;
+  left: 0;
+}
+
+.box:after {
+  left: 25px;
+  top: 0;
+}
+.box:hover{
+    animation: heartbeat 1s infinite forwards;
+}
+@keyframes heartbeat {
+    0%{
+        transform: rotate(-45deg) scale(1);
+    }
+    25%{
+        transform: rotate(-45deg) scale(1.3);
+    }
+    50%{
+        transform: rotate(-45deg) scale(1);
+    }
+    75%{
+        transform: rotate(-45deg) scale(1.3);
+    }
+    100%{
+        transform: rotate(-45deg) scale(1);
+    }
+}
+
+.tip{
+    position: absolute;
+    bottom: 30px;
+}
+.tip p{
+    font-family: sans-serif;
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 10px;
+    letter-spacing: 1px;
+    line-height: 1.5rem;
+    font-weight: lighter;
+}
